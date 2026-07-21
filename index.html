@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Devnarayan Khad Beej Bhandar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --agri-green: #1b4332;
+            --agri-bright: #2d6a4f;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+        <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-green-700 mr-3 shadow-sm">
+                <img src="Anil Shop/Shree Dev.1.jpg" alt="Lord Shree Devnarayan" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col">
+                <span class="text-xl font-bold text-green-900 tracking-tight leading-none">SHREE DEVNARAYAN</span>
+                +<span class="text-[10px] font-bold text-green-700 tracking-[0.2em] uppercase">Khad Beej Bhandar</span>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-8">
+            <div class="hidden md:flex space-x-8 font-semibold text-gray-700">
+                <a href="#" class="hover:text-green-700 transition">Home</a>
+                <a href="#products" class="hover:text-green-700 transition">Products</a>
+                <a href="#contact" class="hover:text-green-700 transition">Contact Us</a>
+            </div>
+            
+            <a href="tel:9057267300" class="bg-green-700 text-white px-5 py-2 rounded-full font-bold flex items-center shadow-lg hover:bg-green-800 transition">
+                <i class="fas fa-phone-alt mr-2"></i> Call Now
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <header class="hero-bg min-h-[550px] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Shree Devnarayan <br><span class="text-green-400">Khad Beej Bhandar</span></h1>
+            <p class="text-xl md:text-2xl mb-8 font-medium text-gray-200">Quality Seeds, Pesticides & Fertilizers</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl">
+                <div class="text-left border-b md:border-b-0 md:border-r border-white/20 pb-4 md:pb-0 md:pr-4">
+                    <p class="text-green-400 text-sm font-bold uppercase mb-1">Owner</p>
+                    <p class="text-xl font-bold">Anil Sharma</p>
+                </div>
+                <div class="text-left border-b md:border-b-0 md:border-r border-white/20 py-4 md:py-0 md:px-4">
+                    <p class="text-green-400 text-sm font-bold uppercase mb-1">Phone</p>
+                    <p class="text-xl font-bold">9057267300</p>
+                </div>
+                <div class="text-left pt-4 md:pt-0 md:pl-4">
+                    <p class="text-green-400 text-sm font-bold uppercase mb-1">Location</p>
+                    <p class="text-xl font-bold">Mahuwa, Bhilwara</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="products" class="max-w-7xl mx-auto py-16 px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-gray-900">Premium Agricultural Supplies</h2>
+            <p class="text-gray-500 mt-2">Select a category or search for a specific product</p>
+        </div>
+
+        <div class="max-w-xl mx-auto mb-10 px-4">
+            <div class="relative">
+                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" id="productSearch" onkeyup="searchProducts()" placeholder="Search seeds, pesticides..." 
+                class="w-full pl-12 pr-4 py-4 rounded-2xl border-2 border-gray-100 shadow-sm focus:border-green-600 focus:outline-none transition">
+            </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button onclick="filterItems('all')" class="category-btn px-8 py-3 rounded-xl font-bold shadow-md bg-green-800 text-white transition hover:scale-105">All Products</button>
+            <button onclick="filterItems('seeds')" class="category-btn px-8 py-3 rounded-xl font-bold shadow-md bg-white text-green-800 border-2 border-green-800 transition hover:bg-green-50">Seeds</b[...]
+            <button onclick="filterItems('pesticides')" class="category-btn px-8 py-3 rounded-xl font-bold shadow-md bg-white text-green-800 border-2 border-green-800 transition hover:bg-green-50">Pes[...]
+            <button onclick="filterItems('fertilizers')" class="category-btn px-8 py-3 rounded-xl font-bold shadow-md bg-white text-green-800 border-2 border-green-800 transition hover:bg-green-50">Fe[...]
+        </div>
+
+        <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>
+    </section>
+
+
+<footer id="contact" class="bg-gray-900 text-white py-16">
+
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
+
+            <div>
+
+                <h3 class="text-2xl font-bold mb-4">Visit Our Shop</h3>
+
+                <p class="text-gray-400 mb-6">Serving the farmers of Mandalgarh with trust and high-quality genuine products.</p>
+
+                <div class="flex items-center text-green-400 font-bold text-lg">
+
+                    <i class="fas fa-map-marker-alt mr-3"></i>
+
+                    <span>Mahuwa, Mandalgarh, Bhilwara (Raj.)</span>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="md:col-span-2 bg-gray-800 p-8 rounded-3xl border border-gray-700">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div>
+
+                        <h4 class="text-xl font-bold mb-4">Contact Details</h4>
+
+                        <ul class="space-y-4">
+
+                            <li class="flex items-center text-gray-300">
+
+                                <i class="fas fa-phone-alt bg-green-700 p-3 rounded-full mr-4"></i>
+
+                                <div>
+
+                                    <p class="text-sm text-gray-500 uppercase">Call Today</p>
+
+                                    <p class="font-bold">9057267300</p>
+
+                                </div>
+
+                            </li>
+
+                            <li class="flex items-center text-gray-300">
+
+                                <i class="fas fa-user bg-green-700 p-3 rounded-full mr-4"></i>
+
+                                <div>
+
+                                    <p class="text-sm text-gray-500 uppercase">Owner</p>
+
+                                    <p class="font-bold">Anil Sharma</p>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div>
+
+                        <h4 class="text-xl font-bold mb-4 text-green-400 uppercase tracking-widest">Our Brands</h4>
+
+                        <p class="text-gray-400">Bayer | Syngenta | Neelam | TATA | Advanta | Nunhems | Kanchan Jyoti | Pioneer | Nutranta | Korko | Allwin | Goodwill | Krishaj</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="text-center mt-12 pt-8 border-t border-gray-800 text-gray-500 text-sm">
+
+            &copy; 2024 Shree Devnarayan Khad Beej Bhandar. Developed for Anil Sharma.
+            <br>
+            By Shubham Tiwari
+
+        </div>
+
+    </footer>
+
+    <script>
+        const products = [
+            { name: "Bayer Profiler", cat: "pesticides", ing: "Fluopicolide + Fosetyl-Al", img: "Anil Shop/Bayer Profiler.jpeg", price: 420 },
+            { name: "Bayer Antracol", cat: "pesticides", ing: "Propineb 70% WP", img: "Anil Shop/Antracol.jpeg", price: 160 },
+            { name: "TATA Tafgor", cat: "pesticides", ing: "Dimethoate 30% EC", img: "Anil Shop/Tafgor.jpeg", price: 650 },
+            { name: "Syngenta Isabion", cat: "fertilizers", ing: "Amino Acids & Peptides", img: "Anil Shop/Isobion.jpeg", price: 700 },
+            { name: "Amanshri F1 Hybrid", cat: "seeds", ing: "Bitter Gourd (Karela)", img: "Anil Shop/F1 hybrid.jpeg", price: 320 },
+            { name: "Advanta Nutrifeed", cat: "seeds", ing: "Multicut Forage Millet", img: "Anil Shop/Kanchan Jyoti.jpeg", price: 600 },
+            { name: "Lalghoda Sorghum", cat: "seeds", ing: "Sorghum Sudan Grass", img: "Anil Shop/Lalghoda.jpeg", price: 300 },
+            { name: "Bayer Solomon", cat: "pesticides", ing: "Beta-cyfluthrin + Imidacloprid", img: "Anil Shop/Solomon.jpeg", price: 2300 },
+            { name: "Foragen" , cat: "seeds" , ing: "Forage Seeds" , img: "Anil Shop/Foragen.jpeg", price: 600 },
+            { name: "Ramcides CropScience" , cat: "fertilizers" , ing: "Gold Super" , img: "Anil Shop/Allwin Gold Super.webp", price: 430 },
+            { name: "Ramcides CropScience" , cat: "fertilizers" , ing: "Top Plus" , img: "Anil Shop/Allwin Top Plus.jpg", price: 250 },
+            { name: "IFSA" , cat: "seeds" , ing: "Multicut Bajra NuTRee" , img: "Anil Shop/Multicut Bajra nutree.webp", price: 60 },
+            { name: "Prabhat Seeds" , cat: "seeds" , ing: "Prabhat Rambo Gold" , img: "Anil Shop/Prabhat Rambo Gold seeds.png", price: 520 },
+            { name: "Shriram" , cat: "pesticides" , ing: "Avolet" , img: "Anil Shop/Shriram Avolet.webp", price: 200 },
+            { name: "Syngenta" , cat: "seeds" , ing: "NK-7899" , img: "Anil Shop/Syngenta nk-7899.webp", price: 1350 },
+            { name: "Trimurti" , cat: "seeds" , ing: "Charu" , img: "Anil Shop/Trimurti Charu.png", price: 680 },
+            { name: "Uttam" , cat: "pesticides" , ing: "EMA" , img: "Anil Shop/Uttam EMA Insecticides.webp", price: 580 },
+            { name: "Uttam" , cat: "pesticides" , ing: "Imidaveer" , img: "Anil Shop/Uttam Imidaveer.webp", price: 320 },
+            { name: "Bayer" , cat: "pesticides" , ing: "Whipsuper" , img: "Anil Shop/Whipsuper Bayer.jpg", price: 1000 },
+            { name: "Neelam" , cat: "seeds" , ing: "Nashik-53" , img: "Anil Shop/Nashik-53 Neelam.webp", price: "1600/Kg" },
+            { name: "Goodwil" , cat: "seeds" , ing: "Heera-31" , img: "Anil Shop/Heera-31 Goodwil.jpg", price: 130 },
+            { name: "Neelam" , cat: "seeds" , ing: "Guwar Neelam-61" , img: "Anil Shop/Guwar Neelam-61.jpeg", price: 800 },
+            { name: "Bayer" , cat: "pesticides" , ing: "Fenos quick" , img: "Anil Shop/Fenos quick bayer.webp", price: 360 },
+            { name: "Allwin" , cat: "fertilizers" , ing: "Felux-p" , img: "Anil Shop/Felux-p Allwin.jpg", price: 350 },
+            { name: "Ramcides CropScience" , cat: "pesticides" , ing: "Gallup" , img: "Anil Shop/Gallup Insecticides.webp", price: 980 },
+            { name: "NUTRANTA" , cat: "seeds" , ing: "Dairy Master" , img: "Anil Shop/Dairy Master Nutranta.webp", price: 580 },
+            { name: "Korko" , cat: "pesticides" , ing: "Korko" , img: "Anil Shop/Korko Insecticides.webp", price: 320 },
+            { name: "Krishaj" , cat: "seeds" , ing: "Krixe" , img: "Anil Shop/Krixe Krishaj.webp", price: 800 },
+            { name: "Kanchan Jyoti" , cat: "seeds" , ing: "Karishma" , img: "Anil Shop/Karishma.jpeg", price: 800 },
+            { name: "Pioneer" , cat: "seeds" , ing: "Pioneer 3501" , img: "Anil Shop/Pioneer P3501.jpeg", price: 1550 },
+            { name: "Pioneer" , cat: "seeds" , ing: "Pionner 3502" , img: "Anil Shop/Pioneer P3502.jpeg", price: 1050 },
+            { name: "Pioneer" , cat: "seeds" , ing: "Pioneer 3302" , img: "Anil Shop/Pioneer 3302.jpeg", price: 1350 },
+            
+
+
+        ];
+
+        let currentCategory = 'all';
+
+        function filterItems(category) {
+            currentCategory = category;
+            renderProducts(products.filter(p => category === 'all' || p.cat === category));
+        }
+
+        function searchProducts() {
+            const term = document.getElementById('productSearch').value.toLowerCase();
+            const filtered = products.filter(p => {
+                const matchesCat = currentCategory === 'all' || p.cat === currentCategory;
+                const matchesSearch = p.name.toLowerCase().includes(term) || p.ing.toLowerCase().includes(term);
+                return matchesCat && matchesSearch;
+            });
+            renderProducts(filtered);
+        }
+
+        function renderProducts(data) {
+            const container = document.getElementById('product-container');
+            container.innerHTML = '';
+            
+            data.forEach(p => {
+                container.innerHTML += `
+                    <div class="product-card flex flex-col h-full bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden transition duration-300">
+                        <div class="h-56 bg-gray-100 flex items-center justify-center overflow-hidden">
+                            <img src="${p.img}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Image+Not+Found'">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="mb-3">
+                                <span class="bg-green-100 text-green-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">${p.cat}</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-1">${p.name}</h3>
+                            <p class="text-sm text-gray-500 font-medium mb-2">${p.ing}</p>
+                            <div class="mb-5">
+                                <span class="text-2xl font-extrabold text-green-700">${p.price ? `₹${p.price}` : 'Contact for price'}</span>
+                                <span class="text-sm text-gray-500 ml-2">per unit</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <a href="https://wa.me/919057267300?text=I+am+interested+in+${p.name}" 
+                                   class="w-full bg-green-50 flex items-center justify-center py-3 rounded-2xl text-green-700 font-bold hover:bg-green-700 hover:text-white transition group">
+                                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Inquiry Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Initial Load
+        filterItems('all');
+    </script>
+</body>
+</html>
